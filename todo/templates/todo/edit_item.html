@@ -11,13 +11,13 @@
 <title>Title</title>
 </head>
 <body>
-    <h1>Add a 'To Do' item:</h1>
-    <form method="POST" action="add">  <!-- tells python to run the 'add' url pattern -->
+    <h1>Edit a 'To Do' item:</h1>
+    <form method="POST">  <!-- will post to the same url we are already on -->
         {% csrf_token %}
         {{ form.as_p }}   <!-- also 'form.as_table' to change the layout of the form -->
         <div>
             <p>
-                <button type="submit">Add Item</button>
+                <button type="submit">Update Item</button>
             </p>
         </div>
     </form>
